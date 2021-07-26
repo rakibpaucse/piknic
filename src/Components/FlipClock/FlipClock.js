@@ -26,14 +26,14 @@ class FlipClock extends React.Component {
 
   updateTime() {
     var currentDate = new Date(),
-      timep = new Date("2020/03/14 00:00:00"),
+      timep = new Date("2021/11/14 00:00:00"),
       diff = Math.round((timep - currentDate) / 1000),
       day = Math.floor(diff / (24 * 60 * 60)),
       surplus = diff - day * (24 * 60 * 60),
       hours = Math.floor(surplus / (60 * 60));
 
       surplus = surplus - hours * (60 * 60)
-      
+
     var  minutes = Math.floor(surplus / 60),
       seconds = surplus - minutes * 60;
 
