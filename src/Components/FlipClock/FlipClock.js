@@ -30,9 +30,11 @@ class FlipClock extends React.Component {
       diff = Math.round((timep - currentDate) / 1000),
       day = Math.floor(diff / (24 * 60 * 60)),
       surplus = diff - day * (24 * 60 * 60),
-      hours = Math.floor(surplus / (60 * 60)),
-      surplus = surplus - hours * (60 * 60),
-      minutes = Math.floor(surplus / 60),
+      hours = Math.floor(surplus / (60 * 60));
+
+      surplus = surplus - hours * (60 * 60)
+      
+    var  minutes = Math.floor(surplus / 60),
       seconds = surplus - minutes * 60;
 
     if (day !== this.state.day) {

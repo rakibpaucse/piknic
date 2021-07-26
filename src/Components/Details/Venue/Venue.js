@@ -2,11 +2,6 @@ import React from "react";
 import {
   Grid,
   Box,
-  Typography,
-  GridList,
-  GridListTile,
-  GridListTileBar,
-  ListSubheader,
   useMediaQuery
 } from "@material-ui/core";
 
@@ -60,8 +55,8 @@ const useStyles = makeStyles(theme => ({
 const Venue = () => {
   const classes = useStyles();
   const md = useMediaQuery(theme => theme.breakpoints.down(900));
-  const sm = useMediaQuery(theme => theme.breakpoints.down(600));
-  const xs = useMediaQuery(theme => theme.breakpoints.down(400));
+  // const sm = useMediaQuery(theme => theme.breakpoints.down(600));
+  // const xs = useMediaQuery(theme => theme.breakpoints.down(400));
   return (
     <Box pb={3} pt={3}>
       <Box pb={5} pt={3}>
@@ -83,6 +78,7 @@ const Venue = () => {
                   secondary={
                     <p className={classes.Secondary}>
                       Ratanpur, Gazipur, Dhaka, Bangladesh
+                      
                     </p>
                   }
                 />

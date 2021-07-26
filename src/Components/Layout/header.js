@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
   },
   subMenu: {
     position: "relative",
-    height: "100%",
+    // height: "100%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -125,7 +125,7 @@ const Header = () => {
           <NavLink to="/">
             <Grid container>
               <Grid item>
-                <img className={classes.logo} src={logo} />
+                <img className={classes.logo} src={logo} alt=""/>
               </Grid>
               <Grid item className={classes.heading}>
                 <div>

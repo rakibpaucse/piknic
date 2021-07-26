@@ -11,7 +11,6 @@ import { MdLockOutline } from "react-icons/md";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import Axios from "axios";
-import { Redirect } from "react-router";
 
 const SignupSchema = Yup.object().shape({
   email: Yup.string()

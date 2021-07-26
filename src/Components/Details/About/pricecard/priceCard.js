@@ -108,7 +108,7 @@ const Pricing = () => {
                   titleTypographyProps={{ align: "center" }}
                   className={classes.cardHeader}
                 />
-                <img src={tier.img} className={classes.img} />
+                <img src={tier.img} className={classes.img} alt="" />
                 <CardContent>
                   <div className={classes.cardPricing}>
                     <div classname={{ minHeight: 200 }}></div>

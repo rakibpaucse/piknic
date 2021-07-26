@@ -125,10 +125,10 @@ const GuestInfo = ({ errors, touched, handleChange, values, handleBlur, nidImage
                 onChange={handleChange}
                 value={values.gNo}
                 InputLabelProps={{
-                  shrink: true
+                  shrink: true,
+                  className: classes.label
                 }}
                 size="small"
-                InputLabelProps={{ className: classes.label }}
                 variant="outlined"
               />
             </Grid>

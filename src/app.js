@@ -1,5 +1,4 @@
 import React, { useState, Suspense } from "react";
-import Layout from "./Layout/Layout";
 import { Switch, Route, Redirect } from "react-router";
 import Home from "./Pages/Home";
 import "./styles.css";

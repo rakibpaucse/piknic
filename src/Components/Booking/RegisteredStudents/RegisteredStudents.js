@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Box, Typography, TextField, Modal, useMediaQuery} from "@material-ui/core";
 import { MdHourglassEmpty } from "react-icons/md";
@@ -15,7 +15,7 @@ import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 
-import { Formik, Form, Field } from "formik";
+import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { db } from "../../../Firebase";
 
@@ -211,7 +211,7 @@ const RegisteredStudents = () => {
                     borderRadius: 5
                   }}
                 >
-                  <img src={tier.img} className={classes.img} />
+                  <img src={tier.img} className={classes.img} alt=""/>
                   <CardContent>
                     <div>
                       <h2 className={classes.name}> {tier.name} </h2>

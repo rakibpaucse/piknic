@@ -3,8 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography, Box, useMediaQuery } from "@material-ui/core";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
-import GridListTileBar from "@material-ui/core/GridListTileBar";
-import ListSubheader from "@material-ui/core/ListSubheader";
+
 
 import SecondaryText from "../../Typography/Secondary/SecondaryText";
 import LineBreak from "../../Util/LineBreak/LineBreak";
@@ -245,7 +244,7 @@ const Gallery = () => {
               >
                 <Fade in={open}>
                   <div className={classes.modal}>
-                    <img src={modalImage} style={{height: md ? '40rem' : '60rem'}}/>
+                    <img src={modalImage} style={{height: md ? '40rem' : '60rem'}} alt="" />
                   </div>
                 </Fade>
               </Modal>

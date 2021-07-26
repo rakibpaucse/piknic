@@ -18,7 +18,6 @@ import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 
 
- import {FaLevelDownAlt as FilterListIcon } from 'react-icons/fa';
 import {MdSave as SaveIcon } from 'react-icons/md'
 
 import { db } from '../Firebase/index'
@@ -150,9 +149,6 @@ const useToolbarStyles = makeStyles(theme => ({
 const EnhancedTableToolbar = ({numSelected , selected ,data}) => { 
   const classes = useToolbarStyles();
  
-  const [modal, setModal] = React.useState(false);
-  const modalClose = () => setModal(false);
-
 
   return ( <div>
     <Toolbar
@@ -178,8 +174,8 @@ const EnhancedTableToolbar = ({numSelected , selected ,data}) => {
               let selectedStudents = [];
 
               selected.forEach( sl => {
-               data.filter( dt => {
-                  if(dt.name == sl){
+               data.forEach( dt => {
+                  if(dt.name === sl){
                     dt.isApproved = true;
                     selectedStudents.push(dt)
                   }
@@ -370,7 +366,7 @@ const modalClose = () => setModal(false);
     setSelected([]);
   };
 
-  const handleClick = (event, name) => {
+  const handleClick = (name) => {
     const selectedIndex = selected.indexOf(name);
     let newSelected = [];
 
@@ -404,7 +400,6 @@ const modalClose = () => setModal(false);
 
   const isSelected = name => selected.indexOf(name) !== -1;
 
-  const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
 
   return (
     <div className={classes.root}>
@@ -456,7 +451,7 @@ const modalClose = () => setModal(false);
                       </TableCell>
                       <TableCell align="center" >{row.id}</TableCell>
                       <TableCell align="center">{row.phone}</TableCell>
-                      <TableCell align="center">{row.department == '042' ? 'CSE' : 'CSIT'}</TableCell>
+                      <TableCell align="center">{row.department === '042' ? 'CSE' : 'CSIT'}</TableCell>
                       <TableCell align="center">{row.gNo}</TableCell>
                       <TableCell align="center" onClick={() => {
                                                                             setvalueForModal(row.nidImage);

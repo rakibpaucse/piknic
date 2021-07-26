@@ -1,16 +1,15 @@
 // responsive done
 import React from "react";
-import { Box, Container, Grid, Paper, useMediaQuery } from "@material-ui/core";
+import { Container, Grid,  useMediaQuery } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { NavLink } from "react-router-dom";
 import logo from "../../Assets/footer.svg";
 import Rakib from "../../Assets/rakib.jpg";
-import Wahid from "../../Assets/wahid.jpg";
+// import Wahid from "../../Assets/wahid.jpg";
 
-import FlipClock from "../FlipClock/FlipClock";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import Divider from "@material-ui/core/Divider";
+// import Divider from "@material-ui/core/Divider";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar";
@@ -125,7 +124,7 @@ const Footer = () => {
                 <NavLink to="/">
                   <Grid container>
                     <Grid item>
-                      <img className={classes.logo} src={logo} />
+                      <img className={classes.logo} src={logo} alt="logo" />
                     </Grid>
                   </Grid>
                 </NavLink>
@@ -135,7 +134,7 @@ const Footer = () => {
             <Grid item xs={xs ? 8 : sm ? 6 : lg ? 4 : 4}>
               <List className={classes.devRoot}>
                 {/* <h1 style={{textAlign:'center'}}> DEVELOPERS! </h1> */}
-                <a href="https://www.facebook.com/WahidHoquee">
+                {/* <a href="https://www.facebook.com/WahidHoquee">
                   <ListItem alignItems="flex-start">
                     <ListItemAvatar>
                       <Avatar
@@ -160,14 +159,14 @@ const Footer = () => {
                       }
                     />
                   </ListItem>
-                </a>
+                </a> */}
 
 
-                <Divider
+                {/* <Divider
                   variant="inset"
                   component="li"
                   style={{ backgroundColor: "#269bd5" }}
-                />
+                /> */}
                 <a href="https://www.facebook.com/rakib.nazrulislam">
                   <ListItem alignItems="flex-start">
                     <ListItemAvatar>
