@@ -9,7 +9,7 @@
 
 1.  **Live Links**
 
-   Live : http://www.paucse.com/
+   Live : https://pau-picnic.netlify.app/
 
  
 
