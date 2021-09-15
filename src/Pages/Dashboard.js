@@ -150,7 +150,7 @@ const EnhancedTableToolbar = ({numSelected , selected ,data}) => {
   const classes = useToolbarStyles();
  
 
-  return ( <div>
+  return ( <div style={{padding:20}}>
     <Toolbar
       className={clsx(classes.root, {
         [classes.highlight]: numSelected > 0,
@@ -402,6 +402,9 @@ const modalClose = () => setModal(false);
 
 
   return (
+
+    <div style={{background:'#e3e3e3', padding:25}}>
+
     <div className={classes.root}>
       <Paper className={classes.paper}>
         <EnhancedTableToolbar numSelected={selected.length} selected={selected} data={data}/>
@@ -495,6 +498,8 @@ const modalClose = () => setModal(false);
               </div>
         </Modal>
      
+    </div>
+
     </div>
   );
 }
